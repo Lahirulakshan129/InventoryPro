@@ -44,7 +44,7 @@
                 <div class="user-info">
                     <div class="user-avatar">JD</div>
                     <div>
-                        <div class="user-name">John Doe</div>
+                        <div class="user-name">Lahiru lk</div>
                         <div class="user-role">Administrator</div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                                 <i class="fas fa-truck"></i>
                             </div>
                         </div>
-                        <div class="stat-card-value">54</div>
+                        <div class="stat-card-value">4</div>
                         <div class="stat-card-footer">
                             <i class="fas fa-minus"></i>
                             <span>No change from last week</span>

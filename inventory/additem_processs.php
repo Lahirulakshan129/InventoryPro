@@ -2,6 +2,7 @@
 include '../DbConnector.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $additemid = $_POST['itemid'];
     $additemname = $_POST["itemname"];
     $adddescription = $_POST["description"];
     $addcategory = $_POST['category'];
@@ -22,19 +23,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $status = "Low Stock";
         }
         
-        $query = "INSERT INTO item (itemname, description, category, unitprice, criticalvalue, quantity, availability) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO item (itemid,itemname, description, category, unitprice, criticalvalue, quantity, availability) VALUES (?, ?, ?, ?, ?, ?, ?,?)";
 
         $dbcon = new DbConnector();
         $con = $dbcon->getConnection();
 
         $pstmt = $con->prepare($query);
-        $pstmt->bindParam(1, $additemname);
-        $pstmt->bindParam(2, $adddescription);
-        $pstmt->bindParam(3, $addcategory);
-        $pstmt->bindParam(4, $addunitprice);
-        $pstmt->bindParam(5, $addcriticalvalue);
-        $pstmt->bindParam(6, $addquantity);
-        $pstmt->bindParam(7, $status);
+        $pstmt->bindParam(1, $additemid);
+        $pstmt->bindParam(2, $additemname);
+        $pstmt->bindParam(3, $adddescription);
+        $pstmt->bindParam(4, $addcategory);
+        $pstmt->bindParam(5, $addunitprice);
+        $pstmt->bindParam(6, $addcriticalvalue);
+        $pstmt->bindParam(7, $addquantity);
+        $pstmt->bindParam(8, $status);
 
         try {
             if ($pstmt->execute()) {
