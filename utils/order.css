@@ -315,6 +315,21 @@ body {
     border-radius: 0 0 12px 12px;
 }
 
+/* Modal backdrop fix */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.show {
+    display: block !important;
+}
+
+body.modal-open {
+    overflow: hidden;
+    padding-right: 0 !important;
+}
+
+/* Form Styles */
 .form-label {
     font-weight: 600;
     color: #495057;
@@ -369,6 +384,19 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+.stat-trend {
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+
+/* Badge styles for table */
+.badge {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    font-weight: 600;
 }
 
 /* Responsive Adjustments */

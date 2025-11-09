@@ -38,12 +38,12 @@ foreach ($rs3 as $order) {
     <title>Order Management</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-          rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
           crossorigin="anonymous">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
+    <link rel="stylesheet" 
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Your custom CSS -->
@@ -79,8 +79,8 @@ foreach ($rs3 as $order) {
             <div class="user-info">
                 <div class="user-avatar"><?php echo substr("LL", 0, 2); ?></div>
                 <div>
-                    <div class="user-name"><?php echo "Lahiru Lakshan"; ?></div>
-                    <div class="user-role">Store Manager</div>
+                <div class="user-name">Lahiru lk</div>
+                <div class="user-role">Administrator</div>
                 </div>
             </div>
         </div>
@@ -94,7 +94,10 @@ foreach ($rs3 as $order) {
                 </div>
 
                 <!-- ==== Create New Order Button ==== -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <button type="button" 
+                        class="btn btn-primary" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#staticBackdrop">
                     <i class="fas fa-plus me-2"></i>Create New Order
                 </button>
             </div>
@@ -104,22 +107,30 @@ foreach ($rs3 as $order) {
                 <div class="stat-card">
                     <div class="stat-label">Total Orders</div>
                     <div class="stat-value"><?php echo $totalOrders; ?></div>
-                    <div class="stat-trend"><i class="fas fa-chart-line text-success me-1"></i>All time orders</div>
+                    <div class="stat-trend">
+                        <i class="fas fa-chart-line text-success me-1"></i>All time orders
+                    </div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-label">Today's Orders</div>
                     <div class="stat-value"><?php echo $todayOrders; ?></div>
-                    <div class="stat-trend"><i class="fas fa-calendar-day text-primary me-1"></i>Orders today</div>
+                    <div class="stat-trend">
+                        <i class="fas fa-calendar-day text-primary me-1"></i>Orders today
+                    </div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-label">Active Items</div>
                     <div class="stat-value"><?php echo count($rs1); ?></div>
-                    <div class="stat-trend"><i class="fas fa-box text-info me-1"></i>Available items</div>
+                    <div class="stat-trend">
+                        <i class="fas fa-box text-info me-1"></i>Available items
+                    </div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-label">Stores</div>
                     <div class="stat-value"><?php echo count($rs2); ?></div>
-                    <div class="stat-trend"><i class="fas fa-store text-warning me-1"></i>Active stores</div>
+                    <div class="stat-trend">
+                        <i class="fas fa-store text-warning me-1"></i>Active stores
+                    </div>
                 </div>
             </div>
 
@@ -205,8 +216,13 @@ foreach ($rs3 as $order) {
 </div>
 
 <!-- ====================== Add Order Modal ====================== -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" 
+     id="staticBackdrop" 
+     data-bs-backdrop="static" 
+     data-bs-keyboard="false" 
+     tabindex="-1" 
+     aria-labelledby="staticBackdropLabel" 
+     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -224,8 +240,11 @@ foreach ($rs3 as $order) {
                     ?>
                     <div class="col-md-4">
                         <label for="orderid" class="form-label">Order ID</label>
-                        <input type="text" class="form-control" name="orderid"
-                               value="<?php echo $nextOrderId; ?>" disabled>
+                        <input type="text" 
+                               class="form-control" 
+                               name="orderid"
+                               value="<?php echo $nextOrderId; ?>" 
+                               disabled>
                     </div>
 
                     <div class="col-md-8">
@@ -242,7 +261,11 @@ foreach ($rs3 as $order) {
 
                     <div class="col-md-4">
                         <label for="quantity" class="form-label">Quantity</label>
-                        <input type="number" class="form-control" name="quantity" required min="1">
+                        <input type="number" 
+                               class="form-control" 
+                               name="quantity" 
+                               required 
+                               min="1">
                     </div>
 
                     <div class="col-md-8">
@@ -259,17 +282,25 @@ foreach ($rs3 as $order) {
 
                     <div class="col-md-12">
                         <label for="orderdate" class="form-label">Order Date</label>
-                        <input type="date" class="form-control" name="orderdate"
-                               required value="<?php echo date('Y-m-d'); ?>">
+                        <input type="date" 
+                               class="form-control" 
+                               name="orderdate"
+                               required 
+                               value="<?php echo date('Y-m-d'); ?>">
                     </div>
 
                     <div class="col-12">
-                        <input type="hidden" name="username" value="<?php echo $_SESSION['username']; ?>">
+                        <input type="hidden" 
+                               name="username" 
+                               value="<?php echo $_SESSION['username']; ?>">
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Create Order</button>
+                        <button type="button" 
+                                class="btn btn-secondary" 
+                                data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" 
+                                class="btn btn-primary">Create Order</button>
                     </div>
                 </form>
             </div>
@@ -277,35 +308,51 @@ foreach ($rs3 as $order) {
     </div>
 </div>
 
-<!-- ====================== Bootstrap JS (must be BEFORE custom scripts) ====================== -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+Jj0vG3M6lT8k5q2jk7u5H1l3hi8"
+<!-- ====================== Bootstrap JS ====================== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
         crossorigin="anonymous"></script>
-
-<!-- ====================== Debug: Bootstrap loaded? ====================== -->
-<script>
-    if (typeof bootstrap === 'undefined') {
-        alert('Bootstrap JS failed to load! Check network / CDN.');
-    }
-</script>
 
 <!-- ====================== Custom JS ====================== -->
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Set today’s date in the modal (fallback if PHP value is missing)
-        const today = new Date().toISOString().split('T')[0];
-        const dateInput = document.querySelector('input[name="orderdate"]');
-        if (dateInput && !dateInput.value) {
-            dateInput.value = today;
-        }
+document.addEventListener('DOMContentLoaded', function () {
+    // Test if Bootstrap loaded
+    if (typeof bootstrap !== 'undefined') {
+        console.log('✓ Bootstrap JS loaded successfully! Version:', bootstrap.Tooltip.VERSION);
+    } else {
+        console.error('✗ Bootstrap JS failed to load!');
+    }
 
-        // Highlight active nav item (optional improvement)
-        const current = location.pathname.split('/').pop();
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            const href = link.getAttribute('href').split('/').pop();
-            link.classList.toggle('active', href === current || (current === 'order.php' && href.includes('order')));
-        });
+    // Set today's date in the modal (fallback if PHP value is missing)
+    const today = new Date().toISOString().split('T')[0];
+    const dateInput = document.querySelector('input[name="orderdate"]');
+    if (dateInput && !dateInput.value) {
+        dateInput.value = today;
+    }
+
+    // Highlight active nav item
+    const current = location.pathname.split('/').pop();
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        const href = link.getAttribute('href').split('/').pop();
+        if (href === current || (current === 'order.php' && href.includes('order'))) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
     });
+
+    // Optional: Add event listener to test modal manually
+    const modalElement = document.getElementById('staticBackdrop');
+    if (modalElement) {
+        modalElement.addEventListener('shown.bs.modal', function () {
+            console.log('✓ Modal opened successfully!');
+        });
+        
+        modalElement.addEventListener('hidden.bs.modal', function () {
+            console.log('✓ Modal closed successfully!');
+        });
+    }
+});
 </script>
+
 </body>
 </html>

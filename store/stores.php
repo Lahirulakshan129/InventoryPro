@@ -50,8 +50,8 @@ $totalStores = count($rs);
                 <div class="user-info">
                     <div class="user-avatar">AD</div>
                     <div>
-                        <div class="user-name">Admin User</div>
-                        <div class="user-role">Store Manager</div>
+                    <div class="user-name">Lahiru lk</div>
+                    <div class="user-role">Administrator</div>
                     </div>
                 </div>
             </div>

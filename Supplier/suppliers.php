@@ -76,8 +76,8 @@
                 <div class="user-info">
                     <div class="user-avatar">JD</div>
                     <div>
-                        <div class="user-name">John Doe</div>
-                        <div class="user-role">Administrator</div>
+                    <div class="user-name">Lahiru lk</div>
+                    <div class="user-role">Administrator</div>
                     </div>
                 </div>
             </div>
