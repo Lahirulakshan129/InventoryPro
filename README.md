@@ -114,7 +114,7 @@ Inventory Pro is a web-based inventory management solution that helps businesses
 ```php
 class DbConnector {
     private $host = "localhost";
-    private $dbname = "inventory_pro";
+    private $dbname = "test_wad";
     private $username = "your_username";
     private $password = "your_password";
     
